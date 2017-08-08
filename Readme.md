@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Svetlana Borisova](https://up.htmlacademy.ru/htmlcss/18/user/142107).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
