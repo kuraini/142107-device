@@ -10,18 +10,19 @@
 		<header class="main-header container">
 		<div class="header-top">
 			<a class="logo">Device</a>
-			<form action="#" method="get" class="search-form">
-				<input type="search" name="search" placeholder="Поиск по сайту">
+			<form class="search-form" action="#" method="get">
+				<label class="visually-hidden" for="search-field">Поиск по сайту</label>
+				<input type="search" name="search" placeholder="Поиск по сайту" id="search-field">
 				<input type="submit" name="submit" value="Найти">
 			</form>
 			<ul class="user-nav header-user-nav">
-				<li><a class="login" href="#">Войти</a></li>
-				<li><a class="compare" href="#">Сравнить</a></li>
-				<li><a class="cart" href="#">Корзина</a></li>
+				<li><a class="login" href="login.html">Войти</a></li>
+				<li><a class="compare" href="compare.html">Сравнить</a></li>
+				<li><a class="cart" href="cart.html">Корзина</a></li>
 			</ul>
 			<nav class="main-nav">
 				<ul>
-					<li><a href="catalog.html" class="main-nav-link catalog">Каталог товаров</a>
+					<li><a class="main-nav-link catalog" href="catalog.html">Каталог товаров</a>
 						<ul class="catalog-dropdown">
 							<li><a href="virtuality.html">Виртуальная реальность</a></li>
 							<li><a href="fitness-tracks.html">Фитнес-браслеты</a></li>
@@ -31,9 +32,9 @@
 							<li><a href="cameras.html">Экшн-камеры</a></li>
 						</ul>
 					</li>
-					<li><a href="delivery.html" class="main-nav-link">Доставка</a></li>
-					<li><a href="guaranty.html" class="main-nav-link">Гарантия</a></li>
-					<li><a href="contacts.html" class="main-nav-link">Контакты</a></li>
+					<li><a class="main-nav-link" href="delivery.html">Доставка</a></li>
+					<li><a class="main-nav-link" href="guaranty.html">Гарантия</a></li>
+					<li><a class="main-nav-link" href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -51,9 +52,9 @@
   		<input type="radio" id="slider2" name="slider-toggle">
   		<input type="radio" id="slider3" name="slider-toggle">
 			<ul class="slider-controls">
-				<li><label for="slider1"></label></li>
-				<li><label for="slider2"></label></li>
-				<li><label for="slider3"></label></li>
+				<li><label for="slider1">Селфи-палка</label></li>
+				<li><label for="slider2">Фитнес-браслет</label></li>
+				<li><label for="slider3">Квадрокоптер</label></li>
 			</ul>
 
 			<section class="slider-item slider-one">
@@ -170,7 +171,7 @@
 
 				<section class="services-item credit">
 					<h2 class="section-title">Кредит</h2>
-					<p>Залезть в долговую яму стало проще! кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
 				</section>
 			</div>		
 		</section>
@@ -182,22 +183,22 @@
 			<ul class="partners-list">
 				<li>
 					<a class="partners-link" href="https://www.dji.com" target="_blank">
-						<img src="img/partners/dji.png" width="260" height="100" alt="Логотип «Dji»">
+						<img src="img/partners/dji.png" width="260" height="100" alt="Dji">
 					</a>
 				</li>
 				<li>
 					<a class="partners-link" href="https://www.sp-gadgets.com" target="_blank">
-						<img src="img/partners/sp-gadgets.png" width="260" height="100" alt="Логотип «Sp-Gadgets»">
+						<img src="img/partners/sp-gadgets.png" width="260" height="100" alt="Sp-Gadgets">
 					</a>
 				</li>
 				<li>
 					<a class="partners-link" href="https://gopro.com" target="_blank">
-						<img src="img/partners/gopro.png" width="260" height="100" alt="Логотип «GoPro»">
+						<img src="img/partners/gopro.png" width="260" height="100" alt="GoPro">
 					</a>
 				</li>
 				<li>
 					<a class="partners-link" href="https://www.vive.com" target="_blank">
-						<img src="img/partners/vive.png" width="260" height="100" alt="Логотип «Vive»">
+						<img src="img/partners/vive.png" width="260" height="100" alt="Vive">
 					</a>
 				</li>
 			</ul>
@@ -222,9 +223,9 @@
 				<h2 class="section-title">Контакты</h2>
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспрособность покупки. Всякое бывает.</p>
 				<a class="map" href="#" target="_blank">
-					<img src="img/map.png" width="560" height="222" alt="Карта проезда">
+					<img src="img/map.png" width="560" height="222" alt="Адрес компании по адресу ул. Строителей 15, Москва">
 				</a>
-				<button class="btn write-us-btn" type="submit">Напишите нам</button>
+				<button class="btn write-us-btn" type="button">Напишите нам</button>
 			</section>
 		</section>
 
@@ -267,24 +268,29 @@
 	<section class="modal modal-write-us">
 		<h2 class="visually-hidden">Напишите нам</h2>
 		<form action="#" method="post">
-			<label>Ваше имя:
-				<input type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
-			</label>
-			<label>Ваш e-mail:
-				<input type="email" name="email" placeholder="Для отправки ответа" autocomplete="on" required>
-			</label>
-			<label>Текст письма:
-				<textarea name="text" placeholder="В свободной форме" required></textarea>
-			</label>
+			<p>
+				<label for="name-field">Ваше имя:</label>
+				<input id="name-field" type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
+			</p>
+			<p>
+				<label for="email-field">Ваш e-mail:</label>
+				<input id="email-field" type="email" name="email" placeholder="Для отправки ответа" autocomplete="on" required>
+			</p>
+			<p>
+				<label for="message-field">Текст письма:</label>
+				<textarea id="message-field" name="text" placeholder="В свободной форме" required></textarea>
+			</p>
 			<input class="btn" type="submit" value="Отправить">
 		</form>
-		<button class="modal-close">x</button>
+		<button class="modal-close" type="button">Закрыть</button>
 	</section>
 
    <section class="modal modal-map">
   	<h2 class="visually-hidden">Как до нас добраться</h2>
-  	<img src="img/map-big.png" width="960" height="559" alt="Карта проезда">
-  	<button class="modal-close">x</button>
+  	<p>
+  		<img src="img/map-big.png" width="960" height="559" alt="Адрес компании по адресу ул.Строителей 15, Москва">
+  	</p>
+  	<button class="modal-close" type="button">Закрыть</button>
    </section>
 
   </body>
