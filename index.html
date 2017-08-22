@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>«Device» - интернет-магазин гаджетов</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -272,15 +273,15 @@
 		<form action="#" method="post">
 			<p>
 				<label for="name-field">Ваше имя:</label>
-				<input id="name-field" type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
+				<input id="name-field" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
 			</p>
 			<p>
 				<label for="email-field">Ваш e-mail:</label>
-				<input id="email-field" type="email" name="email" placeholder="Для отправки ответа" autocomplete="on" required>
+				<input id="email-field" type="email" name="email" value="" placeholder="Для отправки ответа" autocomplete="on" required>
 			</p>
 			<p>
 				<label for="message-field">Текст письма:</label>
-				<textarea id="message-field" name="text" placeholder="В свободной форме" required></textarea>
+				<textarea id="message-field" name="text" value=""placeholder="В свободной форме" required></textarea>
 			</p>
 			<input class="btn" type="submit" value="Отправить">
 		</form>
