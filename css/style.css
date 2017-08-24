@@ -54,6 +54,17 @@ a {
 	text-decoration: none;
 }
 
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
 /* buttons */
 
 .btn {
@@ -316,12 +327,12 @@ a[href="index.html"].logo:active {
 .user-nav a:focus,
 .site-nav a:hover,
 .site-nav a:focus {
-	color: rgba(0, 0, 0, 0.6);
+	opacity: 0.6;
 }
 
 .user-nav a:active,
 .site-nav a:active {
-	color: rgba(0, 0, 0, 0.3);
+	opacity: 0.3;
 }
 
 .user-nav {
@@ -330,6 +341,10 @@ a[href="index.html"].logo:active {
 	line-height: 36px;
 	letter-spacing: 0.01em;
 	font-weight: 300;
+}
+
+.header-user-nav .exit {
+	opacity: 0.3;
 }
 
 .main-nav {
@@ -674,20 +689,283 @@ a[href="index.html"].logo:active {
 
 /* catalog */
 
-.filters-title {
+.breadcrumbs {
+	list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+	font-size: 14px;
+	line-height: 36px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+	color: rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+	background-color: #eeeeee;
+}
+
+.filters-title,
+.sorting-title {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
 	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: 0.2em;
-	font-weight: 800;
-	font-family: "Gilroy", "Arial", sans-serif;
 	color: #000000;
+	text-transform: uppercase;
+}
+
+.filters-title {
+	background-color: #dcdcdc;
+}
+
+.filter fieldset {
+	border: none;
+}
+
+.filter legend {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.2;
+	letter-spacing: 0.01em;
+	color: #000000;
+}
+
+.range-controls {
+	position: relative;
+	width: 200px;
+	margin-bottom: 8px;
+}
+
+.range-controls .scale {
+	height: 2px;
+	background-color: #dbdbdb;
+}
+
+.range-controls .scale-indicator {
+	width: 112px;
+	height: 2px;
+	background-color: #91c92f;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: -10px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.range-controls .toggle::before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #b4b4b4;
+}
+
+.range-controls .toggle-max{
+	left: 107px;
+}
+
+.range-price {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 22,27px;
+	letter-spacing: 0;
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.range-price span:first-child {
+	margin-right: 60px;
+}
+
+.filter ul {
+	list-style: none;
+	font-size: 14px;
+	line-height: 40px;
+	color: #000000;
+}
+
+.filter label {
+	cursor: pointer;
+}
+
+.label-checkbox::before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #000000;
+	border-radius: 2px;
+}
+
+.label-radio::before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #000000;
+	border-radius: 50%;
+}
+
+.label-checkbox:hover::before,
+.label-checkbox:focus::before,
+.label-radio:hover::before,
+.label-radio:focus::before {
+	opacity: 0.6;
+}
+
+.filter-input:disabled {
+	opacity: 0.3;
+}
+
+.catalog-sorting {
+	background-color: #ebebeb;
+}
+
+.sorting-options {
+	list-style: none;
+}
+
+.option-link {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 0;
+	color: #000000;
+	opacity: 0.3;
+}
+
+.option-link:hover,
+.option-link:focus {
+	opacity: 0.6;
+}
+
+.option-link:active,
+.option-link.current {
+	opacity: 1;
+}
+
+.catalog-list {
+	list-style: none;
+}
+
+.product-card-descr {
+	font-family: "Gilroy", "Arial", sans-serif;
+	line-height: 1.2;
+	letter-spacing: 0.01em;
 }
 
 .product-card-title {
 	font-size: 18px;
-	line-height: 1.2;
-	letter-spacing: 0.01em;
 	font-weight: 800;
-	font-family: "Gilroy", "Arial", sans-serif;
 	color: #000000;
 }
+
+.product-card-title a {
+	color: #000000;
+}
+
+.product-card-price {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.product-card-pic {
+	position: relative;
+	width: 360px;
+	height: 380px;
+	cursor: pointer;
+}
+
+.product-card-actions {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 360px;
+	height: 380px;
+	background-color: rgba(238, 238, 238, 0.5);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.product-card-pic:hover .product-card-actions {
+	opacity: 1;
+}
+
+.product-card-actions .compare {
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.product-card-actions .compare:hover,
+.product-card-actions .compare:focus {
+	color: rgba(0, 0, 0, 1);
+}
+
+.product-card-actions .compare:active {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.pagination-list {
+	list-style: none;
+	background-color: #ebebeb;
+}
+
+.pagination-item a {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: 0.2em;
+	color: rgba(0, 0, 0, 0.3);
+	text-transform: uppercase;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-item a:active {
+	color: #000000;
+}
+
+.pagination-item a.current {
+	color: #000000;
+}
+
+.pagination-item .pagination-btn {
+	color: #000000;
+}
+
+.pagination-item .pagination-btn:hover,
+.pagination-item .pagination-btn:focus {
+	background-color: #d9d9d9;
+}
+
+.pagination-item .pagination-btn:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
