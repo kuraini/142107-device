@@ -240,7 +240,7 @@ a.arrow {
 	flex-wrap: wrap;
 	min-height: 188px;
 	margin-top: 40px;
-	padding-top: 35px;
+	padding-top: 33px;
 	padding-left: 60px;
 	padding-right: 60px;
 	background-color: #f7e296;
@@ -515,7 +515,7 @@ a[href="index.html"].logo:active {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 129px;
+	height: 112px;
 	z-index: -1;
 	background-color: #f7e296;
 }
@@ -550,8 +550,8 @@ a[href="index.html"].logo:active {
 
 .slider-descr .slide-number {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: -14px;
+	right: 46px;
 	display: block;
 	z-index: -1;
 	font-family: "Gilroy", "Arial", sans-serif;
@@ -565,7 +565,7 @@ a[href="index.html"].logo:active {
 .slider-descr .section-title {
 	margin: 0;
 	margin-top: -1px;
-	margin-bottom: 30px;
+	margin-bottom: 19px;
 }
 
 .slider-descr p {
