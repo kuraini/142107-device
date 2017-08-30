@@ -164,9 +164,9 @@
 				<div class="container">
 					<div class="index-columns">
 						<div class="left-column">
-							<input type="radio" id="service1" name="services-toggle" checked>
-			  			<input type="radio" id="service2" name="services-toggle">
-			  			<input type="radio" id="service3" name="services-toggle">
+							<input class="visually-hidden" type="radio" id="service1" name="services-toggle" checked>
+			  			<input class="visually-hidden" type="radio" id="service2" name="services-toggle">
+			  			<input class="visually-hidden" type="radio" id="service3" name="services-toggle">
 							<ul class="services-controls">
 								<li><label class="btn services-btn current" for="service1">Доставка</label></li>
 								<li><label class="btn services-btn" for="service2">Гарантия</label></li>
@@ -174,20 +174,22 @@
 							</ul>
 						</div>
 						<div class="right-column">
-							<section class="services-item delivery">
-								<h2 class="section-title">Доставка</h2>
-								<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-							</section>
+							<div class="services-wrapper">
+								<section class="services-item delivery">
+									<h2 class="section-title services-title">Доставка</h2>
+									<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+								</section>
 
-							<section class="services-item guarantee">
-								<h2 class="section-title">Гарантия</h2>
-								<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-							</section>
+								<section class="services-item guarantee">
+									<h2 class="section-title services-title">Гарантия</h2>
+									<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+								</section>
 
-							<section class="services-item credit">
-								<h2 class="section-title">Кредит</h2>
-								<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-							</section>
+								<section class="services-item credit">
+									<h2 class="section-title services-title">Кредит</h2>
+									<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+								</section>
+							</div>
 						</div>
 					</div>
 				</div>		
@@ -230,18 +232,18 @@
 				<h2 class="visually-hidden">Информация о компании</h2>
 
 				<section class="about-us">
-					<h2 class="section-title">О нас</h2>
+					<h2 class="section-title about-us-title">О нас</h2>
 					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 					<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 					<ul class="transport-company-list">
-						<li>Деловые линии</li>
+						<li>Деловые Линии</li>
 						<li>Автотрейдинг</li>
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
 					<a class="btn about-us-btn" href="about-us.html">Подробнее о нас</a>
 				</section>
 				<section class="contacts">
-					<h2 class="section-title">Контакты</h2>
+					<h2 class="section-title contacts-title">Контакты</h2>
 					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспрособность покупки. Всякое бывает.</p>
 					<p>
 						<a class="map" href="#" target="_blank">
