@@ -47,81 +47,87 @@
 
 				<h2 class="visually-hidden">Популярные товары</h2>
 
-				<input type="radio" id="slider-1" name="slider-toggle" checked>
-	  		<input type="radio" id="slider-2" name="slider-toggle">
-	  		<input type="radio" id="slider-3" name="slider-toggle">
-				<div class="slider-controls">
-					<label for="slider-1">Селфи-палка</label>
-					<label for="slider-2">Фитнес-браслет</label>
-					<label for="slider-3">Квадрокоптер</label>
+				<div class="slider-wrapper">
+
+					<input class="visually-hidden" type="radio" id="slide-1" name="slider-toggle" checked>
+		  		<input class="visually-hidden" type="radio" id="slide-2" name="slider-toggle">
+		  		<input class="visually-hidden" type="radio" id="slide-3" name="slider-toggle">
+					<div class="slider-controls">
+						<label for="slide-1"><span class="visually-hidden">Селфи-палка</span></label>
+						<label for="slide-2"><span class="visually-hidden">Фитнес-браслет</span></label>
+						<label for="slide-3"><span class="visually-hidden">Квадрокоптер</span></label>
+					</div>
+
+					<div class="slides-wrapper">
+						<section class="slider-item slide-one" id="slide1">
+							<div class="product-photo">
+								<img src="img/slider/selfie-stick.png" width="384" height="486" alt="Палка для селфи">
+							</div>
+							<div class="slider-descr">
+								<span class="slide-number">01</span>
+								<h2 class="section-title">Делай селфи,<br> как Бен Стиллер!</h2>
+								<p>Самая длинная палка для селфи доступна в нашем магазине.</p>
+								<p>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+								<a class="btn slider-btn" href="selfie-stick.html">Подробнее</a>
+								<table class="product-settings">
+									<tr class="product-settings-value">
+										<td>8,5 м</td>
+										<td>5 кг</td>
+										<td>Карбон</td>
+									</tr>
+									<tr class="product-settings-param">
+										<td>Длина палки</td>
+										<td>Вес палки</td>
+										<td>Материал</td>
+									</tr>
+								</table>
+							</div>
+						</section>
+
+						<section class="slider-item slide-two" id="slide2">
+							<div class="product-photo">
+								<img src="img/slider/fitnes-track.png" width="345" height="485" alt="Фитнес браслет">
+							</div>
+							<div class="slider-descr">
+								<span class="slide-number">02</span>
+								<h2 class="section-title">Худеем<br> правильно!</h2>
+								<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+								<a class="btn slider-btn" href="selfie-stick.html">Подробнее</a>
+								<table class="product-settings">
+									<tr class="product-settings-value">
+										<td>48 часов</td>
+									</tr>
+									<tr class="product-settings-param">
+										<td>Без подзарядки</td>
+									</tr>
+								</table>
+							</div>
+						</section>
+
+						<section class="slider-item slide-three" id="slide3">
+							<div class="product-photo">
+								<img src="img/slider/quadrupter.png" width="526" height="334" alt="Квадрокоптер">
+							</div>
+							<div class="slider-descr">
+								<span class="slide-number">03</span>
+								<h2 class="section-title">Порхает как бабочка, жалит как пчела!</h2>
+								<p>Это обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+								<a class="btn slider-btn" href="selfie-stick.html">Подробнее</a>
+								<table class="product-settings">
+									<tr class="product-settings-value">
+										<td>800 м</td>
+										<td>50 м</td>
+									</tr>
+									<tr class="product-settings-param">
+										<td>Дальность полета</td>
+										<td>Радиус поражения</td>
+									</tr>
+								</table>
+							</div>
+						</section>
+					</div>
+
 				</div>
-
-				<section class="slider-item slider-one">
-					<div class="product-photo">
-						<img src="img/slider/selfie-stick.png" width="384" height="486" alt="Палка для селфи">
-					</div>
-					<div class="slider-descr">
-						<span class="slide-number">01</span>
-						<h2 class="section-title">Делай селфи,<br> как Бен Стиллер!</h2>
-						<p>Самая длинная палка для селфи доступна в нашем магазине.</p>
-						<p>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-						<a class="btn slider-btn" href="selfie-stick.html">Подробнее</a>
-						<table class="product-settings">
-							<tr class="product-settings-value">
-								<td>8,5 м</td>
-								<td>5 кг</td>
-								<td>Карбон</td>
-							</tr>
-							<tr class="product-settings-param">
-								<td>Длина палки</td>
-								<td>Вес палки</td>
-								<td>Материал</td>
-							</tr>
-						</table>
-					</div>
-				</section>
-
-				<section class="slider-item slider-two">
-					<div class="product-photo">
-						<img src="img/slider/fitnes-track.png" width="345" height="485" alt="Фитнес браслет">
-					</div>
-					<div class="slider-descr">
-						<span class="slide-number">02</span>
-						<h2 class="section-title">Худеем<br> правильно!</h2>
-						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-						<a class="btn slider-btn" href="selfie-stick.html">Подробнее</a>
-						<table class="product-settings">
-							<tr class="product-settings-value">
-								<td>48 часов</td>
-							</tr>
-							<tr class="product-settings-param">
-								<td>Без подзарядки</td>
-							</tr>
-						</table>
-					</div>
-				</section>
-
-				<section class="slider-item slider-three">
-					<div class="product-photo">
-						<img src="img/slider/quadrupter.png" width="526" height="334" alt="Квадрокоптер">
-					</div>
-					<div class="slider-descr">
-						<span class="slide-number">03</span>
-						<h2 class="section-title">Порхает как бабочка, жалит как пчела!</h2>
-						<p>Это обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-						<a class="btn slider-btn" href="selfie-stick.html">Подробнее</a>
-						<table class="product-settings">
-							<tr class="product-settings-value">
-								<td>800 м</td>
-								<td>50 м</td>
-							</tr>
-							<tr class="product-settings-param">
-								<td>Дальность полета</td>
-								<td>Радиус поражения</td>
-							</tr>
-						</table>
-					</div>
-				</section>
 
 			</section>
 

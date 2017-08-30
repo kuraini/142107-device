@@ -1,6 +1,7 @@
 @font-face {
 	font-family: "Gilroy";
-	src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+	src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
+			 url("../fonts/gilroyextrabold.woff2") format("woff2"),
 			 url("../fonts/gilroyextrabold.woff") format("woff");
 	font-weight: 800;
 	font-style: normal;
@@ -8,7 +9,8 @@
 
 @font-face {
 	font-family: "Gilroy";
-	src: url("../fonts/gilroylight.woff2") format("woff2"),
+	src: local("Gilroy Light"), local("Gilroy-Light"),
+			 url("../fonts/gilroylight.woff2") format("woff2"),
 			 url("../fonts/gilroylight.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
@@ -16,7 +18,8 @@
 
 @font-face {
 	font-family: "Open Sans";
-	src: url("../fonts/opensans.woff2") format("woff2"),
+	src: local("Open Sans"), local("OpenSans"),
+			 url("../fonts/opensans.woff2") format("woff2"),
 			 url("../fonts/opensans.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
@@ -24,7 +27,8 @@
 
 @font-face {
 	font-family: "Open Sans";
-	src: url("../fonts/opensanslight.woff2") format("woff2"),
+	src: local("Open Sans Light"), local("OpenSans-Light"),
+			 url("../fonts/opensanslight.woff2") format("woff2"),
 			 url("../fonts/opensanslight.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
@@ -55,15 +59,19 @@ a {
 	text-decoration: none;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
 	position: absolute;
 	overflow: hidden;
+	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	width: 1px;
 	height: 1px;
 	margin: -1px;
 	padding: 0;
 	border: 0;
+	white-space: nowrap;
 }
 
 .container {
@@ -534,7 +542,7 @@ a[href="index.html"].logo:active {
 .catalog-dropdown {
 	position: absolute;
 	left: -60px;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	flex-flow: row wrap;
 	align-content: flex-start;
@@ -585,24 +593,24 @@ a[href="index.html"].logo:active {
 /* slider */
 
 .slider {
-	position: relative;
 	margin-bottom: 96px;
 }
 
-.slider input[type="radio"] {
-	display: none;
+.slider-wrapper {
+	position: relative;
+	width: 1160px;
+	height: 495px;
 }
 
 .slider-controls {
 	position: absolute;
-	right: 81px;
-	bottom: 127px;
+	right: 80px;
+	bottom: 146px;
 	display: flex;
 	flex-wrap: wrap;
 	min-width: 80px;
 	max-width: 200px;
 	z-index: 3;
-	font-size: 0;
 }
 
 .slider-controls label {
@@ -621,25 +629,21 @@ a[href="index.html"].logo:active {
 	margin-right: 0;
 }
 
-#slider-1:checked ~ .slider-controls label[for="slider-1"]::before,
-#slider-2:checked ~ .slider-controls label[for="slider-2"]::before,
-#slider-3:checked ~ .slider-controls label[for="slider-3"]::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 6px;
-	height: 6px;
-	border: 1px solid #000000;
-	border-radius: 50%;
-	transform: translate(-50%, -50%);
+.slides-wrapper {
+	position: relative;
+	width: inherit;
+	height: inherit;
+	overflow: hidden;
 }
 
 .slider-item {
+	position: absolute;
 	display: flex;
 	justify-content: space-between;
-	position: relative;
+	width: inherit;
+	height: inherit;
 	padding-right: 50px;
+	opacity: 0;
 }
 
 .slider-item::before {
@@ -652,15 +656,35 @@ a[href="index.html"].logo:active {
 	background-color: #f7e296;
 }
 
-.slider-one .product-photo {
+#slide-1:checked ~ .slides-wrapper #slide1,
+#slide-2:checked ~ .slides-wrapper #slide2,
+#slide-3:checked ~ .slides-wrapper #slide3 {
+	opacity: 1;
+}
+
+#slide-1:checked ~ .slider-controls label[for="slide-1"]::before,
+#slide-2:checked ~ .slider-controls label[for="slide-2"]::before,
+#slide-3:checked ~ .slider-controls label[for="slide-3"]::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6px;
+	height: 6px;
+	border: 1px solid #000000;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slide-one .product-photo {
 	padding-left: 90px;
 }
 
-.slider-two .product-photo {
+.slide-two .product-photo {
 	padding-left: 116px;
 }
 
-.slider-three .product-photo {
+.slide-three .product-photo {
 	padding-top: 62px;
 	padding-left: 31px;
 }
@@ -683,7 +707,7 @@ a[href="index.html"].logo:active {
 .slider-descr .slide-number {
 	position: absolute;
 	top: -14px;
-	right: 46px;
+	right: 45px;
 	display: block;
 	z-index: -1;
 	font-family: "Gilroy", "Arial", sans-serif;
@@ -728,11 +752,7 @@ a[href="index.html"].logo:active {
 }
 
 .product-settings {
-	width: 460px;
-}
-
-.product-settings td {
-	width: 160px;
+	margin-left: -2px;
 }
 
 .product-settings-value {
@@ -744,9 +764,26 @@ a[href="index.html"].logo:active {
 	color: #000000;
 }
 
+.product-settings-value td:nth-child(1) {
+	width: 158px;
+}
+
+.product-settings-value td:nth-child(2) {
+	width: 136px;
+}
+
+.product-settings-value td:nth-child(3) {
+	width: 158px;
+}
+
 .product-settings-param {
 	font-size: 13px;
 	line-height: 20px;
+	height: 33px;
+}
+
+.product-settings-param td:nth-child(3) {
+	padding-left: 3px;
 }
 
 /* product-category*/
@@ -785,6 +822,14 @@ a[href="index.html"].logo:active {
 	color: #000000;
 }
 
+.category-link.virtuality {
+	letter-spacing: 0.031em;
+}
+
+.category-link.monopods {
+	letter-spacing: 0.025em;
+}
+
 .category-link::before {
 	content: "";
 	display: inline-block;
@@ -797,37 +842,37 @@ a[href="index.html"].logo:active {
 .virtuality.category-link::before {
 	background-image: url(../img/decor/popular-1.svg);
 	background-repeat: no-repeat;
-	background-position: 31px 53px;
+	background-position: 32px 53px;
 }
 
 .monopods.category-link::before {
 	background-image: url(../img/decor/popular-2.svg);
 	background-repeat: no-repeat;
-	background-position: 38px 42px;
+	background-position: 39px 42px;
 }
 
 .cameras.category-link::before {
 	background-image: url(../img/decor/popular-3.svg);
 	background-repeat: no-repeat;
-	background-position: 49px 39px;
+	background-position: 50px 39px;
 }
 
 .fitness-tracks.category-link::before {
 	background-image: url(../img/decor/popular-4.svg);
 	background-repeat: no-repeat;
-	background-position: 28px 51px;
+	background-position: 29px 51px;
 }
 
 .smart-watches.category-link::before {
 	background-image: url(../img/decor/popular-5.svg);
 	background-repeat: no-repeat;
-	background-position: 55px 33px;
+	background-position: 56px 33px;
 }
 
 .quadrocopters.category-link::before {
 	background-image: url(../img/decor/popular-6.svg);
 	background-repeat: no-repeat;
-	background-position: 13px 50px;
+	background-position: 14px 50px;
 }
 
 .category-link:hover::before,
