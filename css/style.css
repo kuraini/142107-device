@@ -151,7 +151,7 @@ a {
 a.arrow {
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 10px;
+	margin-left: 15px;
 }
 
 .arrow::before {
@@ -259,7 +259,7 @@ a.arrow {
 .header-logo {
 	position: absolute;
 	top: -29px;
-	left: 58px;
+	left: 59px;
 }
 
 a[href="index.html"].logo:hover,
@@ -272,6 +272,7 @@ a[href="index.html"].logo:active {
 }
 
 .search-form {
+	position: relative;
 	margin-bottom: 31px;
 }
 
@@ -290,7 +291,43 @@ a[href="index.html"].logo:active {
 	outline: none;
 }
 
+.search-form::before {
+	content: "";
+	position: absolute;
+	top: 18px;
+	left: 4px;
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/decor/search.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.search-form input[type="search"]::-webkit-input-placeholder  {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input[type="search"]::-moz-input-placeholder  {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input[type="search"]::-ms-input-placeholder  {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input[type="search"]:-ms-input-placeholder  {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input[type="search"]::placeholder  {
+	color: rgba(0, 0, 0, 0.3);
+}
+
 .search-form input[type="search"]:hover::-webkit-input-placeholder  {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input[type="search"]:hover::-moz-input-placeholder  {
 	color: rgba(0, 0, 0, 0.6);
 }
 
@@ -355,14 +392,11 @@ a[href="index.html"].logo:active {
 }
 
 .header-user-nav a:hover,
-.header-user-nav a:focus,
-.site-nav a:hover,
-.site-nav a:focus {
+.header-user-nav a:focus {
 	opacity: 0.6;
 }
 
-.header-user-nav a:active,
-.site-nav a:active {
+.header-user-nav a:active {
 	opacity: 0.3;
 }
 
@@ -374,10 +408,54 @@ a[href="index.html"].logo:active {
 	font-weight: 300;
 }
 
+.user-nav a {
+	position: relative;
+	display: block;
+	padding-left: 27px;
+}
+
+.user-nav .exit {
+	padding-left: 0;
+}
+
 .header-user-nav {
 	display: flex;
 	width: 500px;
 	padding-top: 7px;
+}
+
+.user-nav a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 13px;
+	height: 13px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.user-nav a.exit::before {
+	width: 0;
+	height: 0;
+}
+
+.header-user-nav a.login-icon::before {
+	background-image: url(../img/decor/user.svg);
+	top: 11px;
+	left: 0;
+}
+
+.header-user-nav a.compare-icon::before {
+	background-image: url(../img/decor/compare.svg);
+	top: 12px;
+	left: 6px;
+}
+
+.header-user-nav a.cart-icon::before {
+	background-image: url(../img/decor/cart.svg);
+	top: 11px;
+	left: 4px;
 }
 
 .header-user-nav li:first-child {
@@ -385,7 +463,12 @@ a[href="index.html"].logo:active {
 }
 
 .header-user-nav li:last-child {
-	margin-left: 30px;
+	margin-left: 36px;
+	margin-right: -1px;
+}
+
+.header-user-nav li:nth-last-child(2) {
+	margin-left: 55px;
 }
 
 .header-user-nav .exit {
@@ -412,7 +495,9 @@ a[href="index.html"].logo:active {
 }
 
 .site-nav > li:first-child {
+	position: relative;
 	margin-right: auto;
+	padding-right: 27px;
 }
 
 .site-nav > li:nth-child(2) {
@@ -420,8 +505,30 @@ a[href="index.html"].logo:active {
 }
 
 .site-nav > li:last-child {
-	margin-left: 109px;
+	margin-left: 108px;
 	margin-right: -4px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.site-nav a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.site-nav .catalog-icon::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/decor/plus.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.3;
 }
 
 .catalog-dropdown {
@@ -430,11 +537,12 @@ a[href="index.html"].logo:active {
 	z-index: 1;
 	visibility: hidden;
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	align-content: flex-start;
 	width: 1160px;
-	padding: 0 60px;
-	padding-top: 38px;
+	padding-top: 22px;
+	padding-left: 62px;
+	padding-right: 60px;
 	min-height: 165px;
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
@@ -445,8 +553,28 @@ a[href="index.html"].logo:active {
 	background-color: #f7e296;
 }
 
-.catalog-dropdown li {
-	margin-right: 40px;
+.catalog-dropdown li:first-of-type {
+	flex: 1 0 237px;
+}
+
+.catalog-dropdown li:nth-of-type(2) {
+	flex: 1 0 200px;
+}
+
+.catalog-dropdown li:nth-of-type(3) {
+	flex: 2 0 598px;
+}
+
+.catalog-dropdown li:nth-of-type(4) {
+	flex: 1 0 199px;
+}
+
+.catalog-dropdown li:nth-of-type(5) {
+	flex: 2 0 723px;
+}
+
+.catalog-dropdown li:nth-of-type(6) {
+	flex: 5 5 200px;
 }
 
 .site-nav > li:hover .catalog-dropdown {
@@ -466,8 +594,8 @@ a[href="index.html"].logo:active {
 
 .slider-controls {
 	position: absolute;
-	right: 82px;
-	bottom: 138px;
+	right: 81px;
+	bottom: 127px;
 	display: flex;
 	flex-wrap: wrap;
 	min-width: 80px;
@@ -1019,22 +1147,7 @@ a[href="index.html"].logo:active {
 }
 
 .footer-user-nav a {
-	position: relative;
-	display: block;
-	padding-left: 27px;
-	margin-bottom: 10px;
 	color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-user-nav a::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 13px;
-	height: 13px;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 .footer-user-nav .login-icon::before {
@@ -1174,14 +1287,14 @@ a[href="index.html"].logo:active {
 /* catalog */
 
 .main-catalog .catalog-title {
-	padding-top: 38px;
+	padding-top: 31px;
 	padding-left: 60px;
 	padding-right: 60px;
 }
 
 .main-catalog .page-title {
 	margin: 0;
-	margin-bottom: 38px;
+	margin-bottom: 15px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 800;
 	font-size: 47px;
@@ -1196,7 +1309,7 @@ a[href="index.html"].logo:active {
 	flex-wrap: wrap;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 50px;
+	margin-bottom: 39px;
 	list-style: none;
 }
 
@@ -1252,7 +1365,7 @@ a[href="index.html"].logo:active {
 }
 
 .sorting-title {
-	margin-right: 54px;
+	margin-right: 55px;
 }
 
 .catalog-sorting {
@@ -1432,6 +1545,7 @@ a[href="index.html"].logo:active {
 
 .catalog {
 	width: 760px;
+	margin-top: 58px;
 }
 
 .catalog-list {
@@ -1582,8 +1696,11 @@ a.pagination-btn.btn-next {
 }
 
 a.pagination-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 40px;
-	padding-top: 2px;
+	height: 70px;
 	padding-left: 10px;
 	text-align: center;
 }
