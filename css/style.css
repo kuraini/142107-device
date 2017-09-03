@@ -2081,19 +2081,7 @@ a[href="index.html"].logo:active {
 	color: rgba(7, 7, 7, 0.4);
 }
 
-.message-item input[type="text"]::-moz-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
-.message-item input[type="text"]::-ms-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
 .message-item input[type="text"]:-ms-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
-.message-item input[type="text"]::-webkit-input-placeholder {
 	color: rgba(7, 7, 7, 0.4);
 }
 
@@ -2105,19 +2093,7 @@ a[href="index.html"].logo:active {
 	color: rgba(7, 7, 7, 0.4);
 }
 
-.message-item input[type="email"]::-moz-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
-.message-item input[type="email"]::-ms-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
 .message-item input[type="email"]:-ms-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
-.message-item input[type="email"]::-webkit-input-placeholder {
 	color: rgba(7, 7, 7, 0.4);
 }
 
@@ -2129,19 +2105,11 @@ a[href="index.html"].logo:active {
 	color: rgba(7, 7, 7, 0.4);
 }
 
-.message-item textarea::-moz-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
-.message-item textarea::-ms-input-placeholder {
-	color: rgba(7, 7, 7, 0.4);
-}
-
 .message-item textarea:-ms-input-placeholder {
 	color: rgba(7, 7, 7, 0.4);
 }
 
-.message-item textarea::-webkit-input-placeholder {
+.message-item textarea::placeholder {
 	color: rgba(7, 7, 7, 0.4);
 }
 
@@ -2556,8 +2524,8 @@ a[href="index.html"].logo:active {
 	border-radius: 50%;
 }
 
-.label-checkbox input[type="checkbox"]:hover + .checkbox-indicator,
-.label-radio input[type="radio"]:hover + .radio-indicator {
+.label-checkbox:hover .checkbox-indicator,
+.label-radio:hover .radio-indicator{
 	opacity: 0.6;
 }
 
