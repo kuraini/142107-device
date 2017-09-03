@@ -2378,6 +2378,7 @@ a[href="index.html"].logo:active {
 }
 
 .filter legend {
+	position: relative;
 	padding-top: 14px;
 	margin-bottom: 20px;
 	font-family: "Gilroy", "Arial", sans-serif;
