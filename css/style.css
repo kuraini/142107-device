@@ -559,7 +559,7 @@ input[type="radio"].visually-hidden {
 .btn::before {
 	content: "";
 	position: absolute;
-	top: 15px;
+	top: 38%;
 	left: 0;
 	z-index: -1;
 	width: 100%;
