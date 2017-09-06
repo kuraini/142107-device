@@ -2868,6 +2868,10 @@ a.pagination-link {
 	text-align: center;
 }
 
+.modal-map iframe {
+	border: 0;
+}
+
 @keyframes shake {
 	0%,
 	100% {
