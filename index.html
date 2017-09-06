@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <title>«Device» - интернет-магазин гаджетов</title>
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 		
 		<header class="main-header index-header container">
 			<a class="logo header-logo">Device</a>
 			<form class="search-form" action="#" method="get">
+				<label for="search-field" class="visually-hidden">Введите название товара</label>
 				<input class="search-icon" type="search" name="search" placeholder="Поиск по сайту" id="search-field">
 				<input type="submit" name="submit" value="Найти">
 			</form>
@@ -20,20 +21,22 @@
 				<li class="header-user-nav-cart"><a class="cart-icon" href="cart.html">Корзина</a></li>
 			</ul>
 			<nav class="main-nav">
+				<ul class="catalog-nav">
+				<li class="catalog-nav-item"><a href="catalog.html" class="catalog-icon">Каталог товаров</a>
+					<ul class="catalog-dropdown">
+						<li class="virtuality"><a href="virtuality.html">Виртуальная реальность</a></li>
+						<li class="fitness-tracks"><a href="fitness-tracks.html">Фитнес-браслеты</a></li>
+						<li class="quadrocopters"><a href="quadrocopters.html">Квадрокоптеры</a></li>
+						<li class="monopods"><a href="monopods.html">Моноподы для селфи</a></li>
+						<li class="smart-watches"><a href="smart-watches.html">Умные часы</a></li>
+						<li class="cameras"><a href="cameras.html">Экшн-камеры</a></li>
+					</ul>
+				</li>
+			</ul>
 				<ul class="site-nav">
-					<li class="site-nav-catalog"><a class="catalog-icon" href="catalog.html">Каталог товаров</a>
-						<ul class="catalog-dropdown">
-							<li class="virtuality"><a href="virtuality.html">Виртуальная реальность</a></li>
-							<li class="fitness-tracks"><a href="fitness-tracks.html">Фитнес-браслеты</a></li>
-							<li class="quadrocopters"><a href="quadrocopters.html">Квадрокоптеры</a></li>
-							<li class="monopods"><a href="monopods.html">Моноподы для селфи</a></li>
-							<li class="smart-watches"><a href="smart-watches.html">Умные часы</a></li>
-							<li class="cameras"><a href="cameras.html">Экшн-камеры</a></li>
-						</ul>
-					</li>
-					<li class="site-nav-delivery"><a href="delivery.html">Доставка</a></li>
-					<li class="site-nav-guaranty"><a href="guaranty.html">Гарантия</a></li>
-					<li class="site-nav-contacts"><a href="contacts.html">Контакты</a></li>
+					<li class="site-nav-item-delivery"><a href="delivery.html">Доставка</a></li>
+					<li class="site-nav-item-warranty"><a href="warranty.html">Гарантия</a></li>
+					<li class="site-nav-item-contacts"><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -245,7 +248,7 @@
 							<img src="img/map.png" width="560" height="222" alt="Адрес компании по адресу ул. Строителей 15, Москва">
 						</a>
 					</p>
-					<button class="btn write-us-btn" type="button">Напишите нам</button>
+					<a class="btn write-us-btn" href="write-us.html">Напишите нам</a>
 				</section>
 			</section>
 
@@ -286,17 +289,15 @@
 	  </footer>
 	
 		<section class="modal modal-write-us">
-
 			<h2 class="visually-hidden">Напишите нам</h2>
-
 			<form class="message-form" action="#" method="post">
 				<p class="message-item">
 					<label for="name-field">Ваше имя:</label>
-					<input id="name-field" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
+					<input id="name-field" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста">
 				</p>
 				<p class="message-item">
 					<label for="email-field">Ваш e-mail:</label>
-					<input id="email-field" type="email" name="email" value="" placeholder="Для отправки ответа" autocomplete="on" required>
+					<input id="email-field" type="email" name="email" value="" placeholder="Для отправки ответа" autocomplete="on">
 				</p>
 				<p class="message-item">
 					<label for="message-field">Текст письма:</label>
@@ -308,14 +309,11 @@
 		</section>
 
 	  <section class="modal modal-map">
-
 	  	<h2 class="visually-hidden">Как до нас добраться</h2>
-
-	  	<p>
-	  		<img src="img/map-big.png" width="960" height="559" alt="Адрес компании по адресу ул.Строителей 15, Москва">
-	  	</p>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1590.3694573092025!2d37.52814633676974!3d55.686865692607604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1504640368900" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
+	  	<p><img src="img/map-big.png" width="960" height="559" alt="Адрес компании по адресу ул.Строителей 15, Москва"></p>
 	  	<button class="modal-close" type="button">Закрыть</button>
 	  </section>
-
+		<script src="js/main.min.js"></script>
   </body>
 </html>
