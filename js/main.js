@@ -26,7 +26,7 @@ var close = popup.querySelector(".modal-close");
 var form = popup.querySelector("form");
 var formName = popup.querySelector("[name=name]");
 var mail = popup.querySelector("[name=email]");
-var message = form.querySelector("[name=text]"); 
+var message = form.querySelector("[name=text]");
 
 
 link.addEventListener("click", function (evt) {
