@@ -451,7 +451,7 @@ template {
 	src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
 			 url("../fonts/gilroyextrabold.woff2") format("woff2"),
 			 url("../fonts/gilroyextrabold.woff") format("woff");
-	font-weight: 800;
+	font-weight: 900;
 	font-style: normal;
 }
 
@@ -559,7 +559,7 @@ input[type="radio"].visually-hidden {
 	padding-left: 5px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: 800;
+	font-weight: 900;
 	line-height: 1.2;
 	letter-spacing: 0.2em;
 	text-align: center;
@@ -635,7 +635,7 @@ input[type="radio"].visually-hidden {
 a.arrow {
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 15px;
+	margin-left: 20px;
 }
 
 .arrow::before {
@@ -660,6 +660,12 @@ a.arrow {
 	border-color: #231f20;
 	border-right-color: transparent;
 	border-left-color: transparent;
+}
+
+.arrow-up {
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
 }
 
 .arrow-up::before {
@@ -746,7 +752,7 @@ a.arrow {
 	font-size: 48px;
 	line-height: 1.2;
 	letter-spacing: 0.01em;
-	font-weight: 800;
+	font-weight: 900;
 	color: #000000;
 	text-transform: uppercase;
 }
@@ -1031,7 +1037,7 @@ a[href="index.html"].footer-logo:active {
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: 0.2em;
-	font-weight: 800;
+	font-weight: 900;
 	color: rgba(0, 0, 0, 1);
 	text-transform: uppercase;
 }
@@ -1312,7 +1318,7 @@ a[href="index.html"].footer-logo:active {
 	display: block;
 	z-index: -1;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 179px;
 	line-height: 179px;
 	letter-spacing: 0.02em;
@@ -1341,7 +1347,7 @@ a[href="index.html"].footer-logo:active {
 .section-title {
 	margin: 0;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 47px;
 	line-height: 1.2;
 	letter-spacing: 0.01em;
@@ -1419,7 +1425,7 @@ a[href="index.html"].footer-logo:active {
 	display: block;
 	width: 160px;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: 0.01em;
@@ -1771,7 +1777,7 @@ a[href="index.html"].footer-logo:active {
 	margin: 0;
 	margin-bottom: 55px;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 16px;
 	line-height: 40px;
 	color: #000000;
@@ -2129,7 +2135,7 @@ a[href="index.html"].footer-logo:active {
 	display: block;
 	margin-bottom: 10px;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 18px;
 	letter-spacing: 0;
@@ -2265,7 +2271,7 @@ a[href="index.html"].footer-logo:active {
 	margin: 0;
 	margin-bottom: 15px;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 47px;
 	line-height: 1.2;
 	letter-spacing: 0.015em;
@@ -2351,7 +2357,7 @@ a[href="index.html"].footer-logo:active {
 .sorting-title {
 	margin: 0;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: 0.24em;
@@ -2409,6 +2415,13 @@ a[href="index.html"].footer-logo:active {
 }
 
 .sorting-direction {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+			flex-direction: row-reverse;
 	min-width: 65px;
 	margin-left: auto;
 	margin-right: -1px;
@@ -2710,7 +2723,7 @@ input[type="radio"]:disabled+.radio-indicator {
 			flex-basis: 260px;
 	margin: 0;
 	font-size: 18px;
-	font-weight: 800;
+	font-weight: 900;
 	letter-spacing: 0.015em;
 	color: #000000;
 }
@@ -2850,7 +2863,7 @@ input[type="radio"]:disabled+.radio-indicator {
 .pagination-block a {
 	display: block;
 	font-family: "Gilroy", "Arial", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: 0.2em;
